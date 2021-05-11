@@ -782,15 +782,18 @@ public class DBSample {
 
         if(where != null) where_s = where;
 
-        sqlQuery = " select my_flights.*,  ct1.name AS gorod_vyleta_name,  ct2.name AS gorod_prileta_name,  ar1.name AS aeroport_vyleta_name,  ar2.name AS aeroport_prileta_name "
+        Log.d("Services--------", "filter "+where_s);
+
+
+        sqlQuery = " select my_flights.*, ct1.name AS gorod_vyleta_name,  ct2.name AS gorod_prileta_name,  ar1.name AS aeroport_vyleta_name,  ar2.name AS aeroport_prileta_name "
                 + " from my_flights  "
                 + " LEFT JOIN cities AS ct1 ON (my_flights.gorod_vyleta_id = ct1.id) "
                 + " LEFT JOIN cities AS ct2 ON (my_flights.gorod_prileta_id = ct2.id) "
                 + " LEFT JOIN aeroporty AS ar1 ON (my_flights.aeroport_vyleta_id = ar1.id) "
                 + " LEFT JOIN aeroporty AS ar2 ON (my_flights.aeroport_prileta_id = ar2.id) "
-                + " where "+where_s
+                + " where " + where_s
                 + " group by my_flights.id "
-                + " order by my_flights.data_vyleta DESC ";
+                + " order by  my_flights.id DESC ";
 
 
         curSelect = dbSel.rawQuery(sqlQuery, null);
@@ -1046,7 +1049,7 @@ public class DBSample {
                 + " from flights  "
                 + " LEFT JOIN cities  ON (flights.gorod_vyleta_id = cities.id) "
                 + " where flights.id > 0 "
-                + " group by flights.gorod_vyleta_id "
+                + " group by flights.gorod_vyleta_id"
                 + " order by flights.gorod_vyleta_id DESC ";
 
 

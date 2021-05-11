@@ -57,7 +57,10 @@ public class TicketAdapter   extends RecyclerView.Adapter<TicketAdapter.ViewHold
 
         holder.txtViewFromAirport.setText(listItem.getAeroport_vyleta_name());
         holder.txtViewToAirport.setText(listItem.getAeroport_prileta_name());
-        holder.txtViewCost.setText(""+listItem.getStoimost()+" "+listItem.getValjuta());
+        if (listItem.getValjuta() != null) {
+            holder.txtViewCost.setText("" + listItem.getStoimost() + " " + listItem.getValjuta());
+        }
+
 
     }
 

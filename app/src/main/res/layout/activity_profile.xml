@@ -285,6 +285,7 @@
                             android:id="@+id/IdProf"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
                             android:src="@drawable/ic_photo" />
                     </LinearLayout>
 
@@ -345,6 +346,7 @@
                     android:inputType="textPassword"
                     android:maxLines="1"
                     android:singleLine="true"
+                    android:layout_marginBottom="10dp"
                     tools:ignore="InvalidImeActionId"/>
 
             </android.support.design.widget.TextInputLayout>
@@ -356,6 +358,7 @@
                 android:text="Сохранить пароль"
                 android:id="@+id/checkBoxSavePassword"
                 android:checked="true"
+                android:visibility="gone"
                 android:layout_marginBottom="10dp"/>
 
 
@@ -363,14 +366,13 @@
                 android:id="@+id/deleteAcount"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
+                android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="50dp"
                 android:background="@drawable/purple_click"
                 android:clickable="true"
                 android:orientation="horizontal"
-                android:padding="2dp"
-                android:visibility="gone"
-                >
+                android:padding="2dp">
 
                 <ImageView
                     android:layout_width="wrap_content"

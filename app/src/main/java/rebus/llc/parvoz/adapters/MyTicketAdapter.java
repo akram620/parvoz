@@ -55,12 +55,15 @@ public class MyTicketAdapter  extends RecyclerView.Adapter<MyTicketAdapter.ViewH
         holder.textViewFlightDate.setText(convertFromatYMDtoDMY(listItem.getData_vyleta()));
         holder.txtViewToAirport.setText(listItem.getAeroport_prileta_name());
         holder.txtViewFromAirport.setText(listItem.getAeroport_vyleta_name());
-        holder.txtViewCost.setText(""+listItem.getStoimost()+" "+listItem.getValjuta());
+
+        if(listItem.getValjuta()!=null) {
+            holder.txtViewCost.setText("" + listItem.getStoimost() + " " + listItem.getValjuta());
+        }
         holder.textViewFlightTime.setText(listItem.getVremja_vyleta());
 
         if(listItem.getStatus_id().equals("novyj")){
             holder.mailLayout.setBackgroundColor(context.getResources().getColor(R.color.colorPrimary));
-            holder.textViewFlightStatus.setText("Новый билет");
+            holder.textViewFlightStatus.setText("Новый заказ");
             holder.textViewFlightStatus.setTextColor(context.getResources().getColor(R.color.colorPrimary));
         }else if(listItem.getStatus_id().equals("obrabatyvaetsja")){
             holder.mailLayout.setBackgroundColor(context.getResources().getColor(R.color.colorParvozOrange));

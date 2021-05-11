@@ -4,17 +4,7 @@
             "outputFile": "/Users/nazirjon/Downloads/Parvoz/Parvoz/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/nazirjon/.gradle/caches/transforms-2/files-2.1/01cc05b406765ddd87a7ef4cf77a4b13/appcompat-v7-28.0.0/res/values-v24/values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
-                    }
-                },
-                {
-                    "source": "/Users/nazirjon/.gradle/caches/transforms-2/files-2.1/51d366e13444903da3a3bb76ce97d850/support-media-compat-28.0.0/res/values-v24/values-v24.xml",
+                    "source": "/Users/nazirjon/.gradle/caches/transforms-2/files-2.1/9b4d72378520e6969faa1c6a768d8934/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -28,6 +18,16 @@
                         "startOffsets": "347,413,474,540",
                         "endColumns": "65,60,65,66",
                         "endOffsets": "408,469,535,602"
+                    }
+                },
+                {
+                    "source": "/Users/nazirjon/.gradle/caches/transforms-2/files-2.1/d17928e96bf66a9bfb3dc98ce8396e49/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
                     }
                 }
             ]

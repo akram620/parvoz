@@ -15,6 +15,7 @@ import android.content.pm.ResolveInfo;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -23,6 +24,7 @@ import android.os.Parcelable;
 import android.provider.MediaStore;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.TextInputLayout;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Base64;
@@ -35,12 +37,14 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.squareup.picasso.Picasso;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -57,6 +61,7 @@ import java.util.Date;
 import java.util.List;
 
 import rebus.llc.parvoz.R;
+import rebus.llc.parvoz.adapters.CameraPickAdapter;
 import rebus.llc.parvoz.db.DBSample;
 import rebus.llc.parvoz.models.MyTicketModel;
 import rebus.llc.parvoz.others.MyAsyncTask;
@@ -74,14 +79,14 @@ import static rebus.llc.parvoz.others.Utilities.getServerUrls;
 import static rebus.llc.parvoz.others.Utilities.justConvertToBitmap;
 
 public class TicketForm  extends AppCompatActivity implements MyAsyncTask.ResponseCame {
-    private static final int PICK_IMAGE_REQUEST = 1;
     Uri picUri;
     private ArrayList<String> permissionsToRequest;
     private ArrayList<String> permissionsRejected = new ArrayList<>();
-    private ArrayList<String> permissions = new ArrayList<>();
 
     private final static int ALL_PERMISSIONS_RESULT = 107;
-    private final static int IMAGE_RESULT = 200;
+
+    private static String FILE_NAME = "photo.jpg";
+    private  File photoFile;
 
     public  Context context;
     ImageView imageView;
@@ -134,10 +139,13 @@ public class TicketForm  extends AppCompatActivity implements MyAsyncTask.Respon
     LinearLayout linearLayoutCencelTicket;
     View linearLayoutScreenShot;
     View contentView;
+
+    private int GALLERY = 1, CAMERA = 2;
+    private String [] permissions = {"android.permission.WRITE_EXTERNAL_STORAGE", "android.permission.ACCESS_FINE_LOCATION", "android.permission.READ_PHONE_STATE", "android.permission.SYSTEM_ALERT_WINDOW","android.permission.CAMERA"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_ticket_form);
         setContentView(R.layout.activity_ticket_form);
 
         base64Document = "";
@@ -231,18 +239,12 @@ public class TicketForm  extends AppCompatActivity implements MyAsyncTask.Respon
         addNewDocument.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivityForResult(getPickImageChooserIntent(), IMAGE_RESULT);
+                showPictureDialog();
             }
         });
 
-
-
-
-//        setContentView(webView);
          contentView = (View) findViewById(R.id.contentView);
 
-        //getBitmap(webView, webView.getWidth(), webView.getHeight(), )
-        //getBitmap(webView);
         linearLayoutScreenShot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -269,16 +271,10 @@ public class TicketForm  extends AppCompatActivity implements MyAsyncTask.Respon
             }
         });
 
-
-        permissions.add(CAMERA);
-        permissions.add(WRITE_EXTERNAL_STORAGE);
-        permissions.add(READ_EXTERNAL_STORAGE);
-        permissionsToRequest = findUnAskedPermissions(permissions);
-
+        // requestMultiplePermissions(); // check permission
+        int requestCode = 200;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-
-            if (permissionsToRequest.size() > 0)
-                requestPermissions(permissionsToRequest.toArray(new String[permissionsToRequest.size()]), ALL_PERMISSIONS_RESULT);
+            requestPermissions(permissions, requestCode);
         }
 
         editTextDateFrom.setOnClickListener(new View.OnClickListener() {
@@ -356,9 +352,6 @@ public class TicketForm  extends AppCompatActivity implements MyAsyncTask.Respon
                 setTitle("Заказ билета");
             }
         }
-
-
-
     }
 
     public Bitmap getBitmap(View view) {
@@ -403,49 +396,125 @@ public class TicketForm  extends AppCompatActivity implements MyAsyncTask.Respon
         return b;
     }
 
-    public Intent getPickImageChooserIntent() {
-
-        Uri outputFileUri = getCaptureImageOutputUri();
-
-        List<Intent> allIntents = new ArrayList<>();
-        PackageManager packageManager = getPackageManager();
-
-        Intent captureIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-        List<ResolveInfo> listCam = packageManager.queryIntentActivities(captureIntent, 0);
-        for (ResolveInfo res : listCam) {
-            Intent intent = new Intent(captureIntent);
-            intent.setComponent(new ComponentName(res.activityInfo.packageName, res.activityInfo.name));
-            intent.setPackage(res.activityInfo.packageName);
-            if (outputFileUri != null) {
-                intent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
-            }
-            allIntents.add(intent);
-        }
-
-        Intent galleryIntent = new Intent(Intent.ACTION_GET_CONTENT);
-        galleryIntent.setType("image/*");
-        List<ResolveInfo> listGallery = packageManager.queryIntentActivities(galleryIntent, 0);
-        for (ResolveInfo res : listGallery) {
-            Intent intent = new Intent(galleryIntent);
-            intent.setComponent(new ComponentName(res.activityInfo.packageName, res.activityInfo.name));
-            intent.setPackage(res.activityInfo.packageName);
-            allIntents.add(intent);
-        }
-
-        Intent mainIntent = allIntents.get(allIntents.size() - 1);
-        for (Intent intent : allIntents) {
-            if (intent.getComponent().getClassName().equals("com.android.documentsui.DocumentsActivity")) {
-                mainIntent = intent;
-                break;
-            }
-        }
-        allIntents.remove(mainIntent);
-
-        Intent chooserIntent = Intent.createChooser(mainIntent, "Select source");
-        chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, allIntents.toArray(new Parcelable[allIntents.size()]));
-
-        return chooserIntent;
+    private void showPictureDialog() {
+        final String [] items = new String[] {"Галерея", "Камера"};
+        final Integer[] icons = new Integer[] { R.drawable.ic_photo_library, R.drawable.ic_camera};
+        ListAdapter adapter = new CameraPickAdapter(this, items, icons);
+        AlertDialog.Builder pictureDialog = new AlertDialog.Builder(this);
+        pictureDialog.setTitle("Выберите").setAdapter(adapter,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which) {
+                            case 0:
+                                choosePhotoFromGallary();
+                                break;
+                            case 1:
+                                takePhotoFromCamera();
+                                break;
+                        }
+                    }
+                });
+        pictureDialog.show();
     }
+
+    public void choosePhotoFromGallary() {
+        Intent galleryIntent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(galleryIntent, GALLERY);
+    }
+    private void takePhotoFromCamera() {
+        Intent intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE); photoFile = getPhotoFile(FILE_NAME);
+        Uri fileProvider = FileProvider.getUriForFile(this, "rebus.llc.parvoz.fileprovider", photoFile);
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, fileProvider);
+        if (intent.resolveActivity(this.getPackageManager()) != null) {
+            startActivityForResult(intent, CAMERA);
+        } else {
+            Toast.makeText(this, "Unable to open camera", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == this.RESULT_CANCELED) {
+            return;
+        }
+        if (requestCode == GALLERY) {
+            if (data != null) {
+                Uri contentURI = data.getData();
+                try {
+                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), contentURI);
+                    base64Document = convertToBase64(bitmap);
+                    Picasso.with(context).load(contentURI).into(imageView);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "Failed!", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+        } else if (requestCode == CAMERA) {
+            Bitmap selectedImage = BitmapFactory.decodeFile(photoFile.getAbsolutePath());
+            base64Document = convertToBase64(selectedImage);
+            Picasso.with(context).load(photoFile.getAbsoluteFile()).into(imageView);
+        }
+    }
+
+    private File getPhotoFile(String filaName) {
+        File getImage = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        try {
+            return File.createTempFile(filaName, ".jpg", getImage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+//    public Intent getPickImageChooserIntent() {
+//
+//        Uri outputFileUri = getCaptureImageOutputUri();
+//
+//        List<Intent> allIntents = new ArrayList<>();
+//        PackageManager packageManager = getPackageManager();
+//
+//        Intent captureIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+//        List<ResolveInfo> listCam = packageManager.queryIntentActivities(captureIntent, 0);
+//        for (ResolveInfo res : listCam) {
+//            Intent intent = new Intent(captureIntent);
+//            intent.setComponent(new ComponentName(res.activityInfo.packageName, res.activityInfo.name));
+//            intent.setPackage(res.activityInfo.packageName);
+//            if (outputFileUri != null) {
+//                intent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
+//            }
+//            allIntents.add(intent);
+//        }
+//
+//        Intent galleryIntent = new Intent(Intent.ACTION_GET_CONTENT);
+//        galleryIntent.setType("image/*");
+//        List<ResolveInfo> listGallery = packageManager.queryIntentActivities(galleryIntent, 0);
+//        for (ResolveInfo res : listGallery) {
+//            Intent intent = new Intent(galleryIntent);
+//            intent.setComponent(new ComponentName(res.activityInfo.packageName, res.activityInfo.name));
+//            intent.setPackage(res.activityInfo.packageName);
+//            allIntents.add(intent);
+//        }
+//
+//        Intent mainIntent = allIntents.get(allIntents.size() - 1);
+//        for (Intent intent : allIntents) {
+//            if (intent.getComponent().getClassName().equals("com.android.documentsui.DocumentsActivity")) {
+//                mainIntent = intent;
+//                break;
+//            }
+//        }
+//        allIntents.remove(mainIntent);
+//
+//        Intent chooserIntent = Intent.createChooser(mainIntent, "Select source");
+//        chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, allIntents.toArray(new Parcelable[allIntents.size()]));
+//
+//        return chooserIntent;
+//    }
 
 
     private Uri getCaptureImageOutputUri() {
@@ -457,28 +526,28 @@ public class TicketForm  extends AppCompatActivity implements MyAsyncTask.Respon
             return outputFileUri;
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
-        if (resultCode == Activity.RESULT_OK) {
-            if (requestCode == IMAGE_RESULT) {
-                String filePath = getImageFilePath(data);
-                if (filePath != null) {
-                    Bitmap selectedImage = BitmapFactory.decodeFile(filePath);
-                    //imageView.setImageBitmap(selectedImage);
-                    Log.d("Connection",selectedImage.toString());
-                    base64Document = convertToBase64(selectedImage);
-                    long length = base64Document.length();
-
-                    Log.d("Connection","LENGTH = "+length);
-                    //convertvToImage(base64Document);
-                    Bitmap bitmap = convertToBitmap(base64Document);
-                    imageView.setImageBitmap(bitmap);
-
-                }
-            }
-        }
-    }
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//
+//        if (resultCode == Activity.RESULT_OK) {
+//            if (requestCode == IMAGE_RESULT) {
+//                String filePath = getImageFilePath(data);
+//                if (filePath != null) {
+//                    Bitmap selectedImage = BitmapFactory.decodeFile(filePath);
+//                    //imageView.setImageBitmap(selectedImage);
+//                    Log.d("Connection",selectedImage.toString());
+//                    base64Document = convertToBase64(selectedImage);
+//                    long length = base64Document.length();
+//
+//                    Log.d("Connection","LENGTH = "+length);
+//                    //convertvToImage(base64Document);
+//                    Bitmap bitmap = convertToBitmap(base64Document);
+//                    imageView.setImageBitmap(bitmap);
+//
+//                }
+//            }
+//        }
+//    }
 
 
     private String getImageFromFilePath(Intent data) {
@@ -812,7 +881,7 @@ public class TicketForm  extends AppCompatActivity implements MyAsyncTask.Respon
         editTextDateFrom.setOnClickListener(null);
         linearLayoutSave.setVisibility(View.GONE);
         addNewDocument.setVisibility(View.GONE);
-        checkBox.setVisibility(View.GONE);
+        //checkBox.setVisibility(View.GONE);
 
         MyTicketModel myTicketModel = DBSample.getMyTicket(context, id);
 
@@ -836,12 +905,14 @@ public class TicketForm  extends AppCompatActivity implements MyAsyncTask.Respon
             }
 
             editTextPasportNumber.setText(myTicketModel.getPassport_number()+' '+myTicketModel.getPassport_series());
-            editTextCost.setText(""+myTicketModel.getStoimost()+" "+myTicketModel.getValjuta());
+            if (myTicketModel.getValjuta() != null) {
+                editTextCost.setText("" + myTicketModel.getStoimost() + " " + myTicketModel.getValjuta());
+            }
             editTextNomerRejsa.setText(myTicketModel.getNomer_rejsa());
             editTextNomerBileta.setText(myTicketModel.getNomer_bileta());
             airoportTo.setText(myTicketModel.getAeroport_prileta_name());
             airoportFrom.setText(myTicketModel.getAeroport_vyleta_name());
-            editTextTime.setText(myTicketModel.getAeroport_vyleta_name());
+            editTextTime.setText(myTicketModel.getVremja_vyleta());
         }else{
             viewPasportNumber.setVisibility(View.GONE);
             viewBD.setVisibility(View.GONE);
@@ -908,7 +979,18 @@ public class TicketForm  extends AppCompatActivity implements MyAsyncTask.Respon
     }
 
     public String getHtml(MyTicketModel model){
-
+//        if(model.getNomer_bileta()!=null){
+//            model.setNomer_bileta("");
+//        }
+//        if(model.getNomer_rejsa()!=null){
+//            model.setNomer_rejsa("");
+//        }
+//        if(model.getValjuta()!=null){
+//            model.setValjuta("");
+//        }
+//        if(model.getBagazh()!=null){
+//            model.setBagazh("");
+//        }
         return "<!DOCTYPE html>\n" +
                 "<html lang=\"en\">\n" +
                 "<head>\n" +
@@ -935,7 +1017,7 @@ public class TicketForm  extends AppCompatActivity implements MyAsyncTask.Respon
                 "    <div class=\"row\" style=\"display: table; width: 100%; table-layout: fixed; border-spacing: 5px; font-size: small; \">\n" +
                 "            <div class=\"col\" style=\"display: table-cell; color: #000; height: 100%; width: 30%; \">"+model.getSurname()+" "+model.getFirst_name()+"</div>\n" +
                 "            <div class=\"col\" style=\"display: table-cell; color: #000; height: 100%; width: 30%; \">"+model.getPassport_series()+" "+model.getPassport_number()+"</div>\n" +
-                "            <div class=\"col\" style=\"display: table-cell; color: #000; height: 100%; \">"+model.getNomer_bileta()+"</div>\n" +
+                "            <div class=\"col\" style=\"display: table-cell; color: #000; height: 100%; \">"+ model.getNomer_bileta()+"</div>\n" +
                 "    </div>\n" +
                 "    <div style=\"display: table; width: 100%; table-layout: fixed; border-spacing: 5px; font-size: large; color: #387493;\">Данные полета</div>\n" +
                 "    <div class=\"row\" style=\"display: table; width: 100%; table-layout: fixed; border-spacing: 5px; font-size: small; background: linear-gradient(to right, #387493, #d8eafa);\">\n" +
@@ -953,7 +1035,6 @@ public class TicketForm  extends AppCompatActivity implements MyAsyncTask.Respon
                 "    <div class=\"row\" style=\"display: table; width: 100%; table-layout: fixed; border-spacing: 5px;  font-size: small; \">\n" +
                 "        <div class=\"col\" style=\"display: table-cell; color: #000; height: 100%; width: 20%;\"></div>\n" +
                 "        <div class=\"col\" style=\"display: table-cell; color: #000; height: 100%; width: 20%;\"></div>\n" +
-                "        <div class=\"col\" style=\"display: table-cell; color: #000; height: 100%; width: 20%;\">"+model.getAeroport_vyleta_name()+" "+model.getGorod_prileta_name()+"</div>\n" +
                 "    </div>\n" +
                 "\n" +
                 "    <div class=\"row\" style=\"display: table; width: 100%; table-layout: fixed; border-spacing: 5px; font-size: small; background: linear-gradient(to right, #387493, #d8eafa);\">\n" +

@@ -53,28 +53,27 @@ public class MyTicketsFragment extends Fragment implements MyAsyncTask.ResponseC
         context = getContext();
         settings = new Settings(context);
         getMyTicketsList();
-
         return rootView;
     }
 
 
-        public void getMyTicketsList(){
+    public void getMyTicketsList() {
 
-            if( myAsyncTask != null) return;
+        if (myAsyncTask != null) return;
 
-            String url = getServerUrls()+"zakazy";
-            List<NameValuePair> params = new ArrayList<NameValuePair>();
-            params.add(new BasicNameValuePair("login", new Settings(context).getLogin()));
-            params.add(new BasicNameValuePair("user_id", new Settings(context).getIdUser()));
-            params.add(new BasicNameValuePair("token", new Settings(context).getToken()));
+        String url = getServerUrls() + "zakazy";
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("login", new Settings(context).getLogin()));
+        params.add(new BasicNameValuePair("user_id", new Settings(context).getIdUser()));
+        params.add(new BasicNameValuePair("token", new Settings(context).getToken()));
 
-            myAsyncTask = new MyAsyncTask(context, params, url, "get");
-            myAsyncTask.setResponseListener(this);
-            myAsyncTask.execute();
-        }
+        myAsyncTask = new MyAsyncTask(context, params, url, "get");
+        myAsyncTask.setResponseListener(this);
+        myAsyncTask.execute();
+    }
 
 
-    public void setMyFlightList(){
+    public void setMyFlightList() {
         myFlifhtListModels = DBSample.getMyTickets(context, null, null);
         myTicketAdapter = new MyTicketAdapter(myFlifhtListModels, context);
         myTicketAdapter.setClickListener(this);
@@ -93,15 +92,15 @@ public class MyTicketsFragment extends Fragment implements MyAsyncTask.ResponseC
     @Override
     public void responseCame(boolean res, String message, JSONObject jObj) {
 
-        if(res){
-            if(myAsyncTask.comandUrl.equals(getServerUrls()+"zakazy")){
+        if (res) {
+            if (myAsyncTask.comandUrl.equals(getServerUrls() + "zakazy")) {
                 ListModels listModels = new ListModels();
 
                 try {
                     objectMapper = new ObjectMapper();
                     listModels = objectMapper.readValue(jObj.toString(), ListModels.class);
 
-                    for(int i =0; i < listModels.getZakazy().size(); i++){
+                    for (int i = 0; i < listModels.getZakazy().size(); i++) {
                         addFlight(context, listModels.getZakazy().get(i));
                     }
 
@@ -112,8 +111,8 @@ public class MyTicketsFragment extends Fragment implements MyAsyncTask.ResponseC
                 }
             }
 
-        }else {
-            if(myAsyncTask.comandUrl.equals(getServerUrls()+"zakazy")){
+        } else {
+            if (myAsyncTask.comandUrl.equals(getServerUrls() + "zakazy")) {
                 setMyFlightList();
                 myAsyncTask = null;
             }

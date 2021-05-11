@@ -11,16 +11,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Utilities {
-
-
-
+    
     public static String getDate(String format){
         DateFormat dateFormat = new SimpleDateFormat(format);
         Date date = new Date();
         return dateFormat.format(date);
     }
-
-
 
     public static String convertFromatYMDtoDMY(String date){
 

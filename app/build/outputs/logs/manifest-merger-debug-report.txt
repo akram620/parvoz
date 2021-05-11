@@ -1,59 +1,59 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:2:1-79:12
-INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:2:1-79:12
-INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:2:1-79:12
-INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:2:1-79:12
-MERGED from [com.karumi:dexter:5.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/bf9d92f048cf55e3fcdb45b8caa32f44/dexter-5.0.0/AndroidManifest.xml:17:1-32:12
-MERGED from [com.android.support:design:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/0624bbd8b03e1be1760fbf6f321457dc/design-28.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/01cc05b406765ddd87a7ef4cf77a4b13/appcompat-v7-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-v4:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/694c1da8fcb68e632a1c6d4490acf81f/support-v4-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/0f11d78cf96ea6b3217464874d0e642a/constraint-layout-1.1.3/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:cardview-v7:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/d3bc6209f4a53bb82a04044d7519093c/cardview-v7-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [id.zelory:compressor:2.1.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/d8381c9d8b8c359393b6ca57282aa980/compressor-2.1.0/AndroidManifest.xml:2:1-12:12
-MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/7d1010bc5947f68f85a6f0d9f87b583b/rxandroid-2.1.0/AndroidManifest.xml:15:1-20:12
-MERGED from [com.android.support:support-fragment:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/12e30169ea06effe614cfffb19992945/support-fragment-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/3cbd9bc28e859c607e91ed3789a6182a/animated-vector-drawable-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/755cdd282845178a2c84199a170c24e1/recyclerview-v7-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/66b0491ef7d5d4b8b6d67d901ace6a42/support-core-ui-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/84ee4f677bf54ab23dee2b8fbd0d554e/support-core-utils-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/09185b17f2c6673b1b1fccd6672ba0c3/support-vector-drawable-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/51d366e13444903da3a3bb76ce97d850/support-media-compat-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/86e6b32785ae8df9dc696b813fbed447/transition-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/39a60688e9d502c433ed0b91b5bac62b/loader-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/b9ce7e76cc5ee3af5da34b11ff0645dd/viewpager-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/22f901239b2f685e04d32c45e2f5b152/coordinatorlayout-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/1a7405d27c5de2b7f9ccdb0754a63ee2/drawerlayout-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/b46d24660cfbb96b217f298b3617269d/slidingpanelayout-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/9d119b9fda19c8ee7432fb0723c2e1b4/customview-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/a7d42058a67a2bc13f2fb85eedb969d7/swiperefreshlayout-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/86775dde09d37f1bac3ee09ad91789ec/asynclayoutinflater-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/f24263e62c1bc34eccf0e9b02afd5a26/support-compat-28.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/f027cacc98a7706a31c13210940e2648/versionedparcelable-28.0.0/AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/8f503d2994a1ffe0081fc48ca5b8b24d/cursoradapter-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/de8775de15f3ed0e982c590a650a9e23/runtime-1.1.1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/e29778f577c91a7e96242aefe6c731e8/documentfile-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/a44ac447cb4ed15b24c0b2d295ac7370/localbroadcastmanager-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/4cc1d002af3af5974f660b705cb7bf44/print-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/c43c29e70f412b1d8699c9ac28e2419b/viewmodel-1.1.1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/83e8496ca5f6f47c6818aefd11343c6c/interpolator-28.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/38e39dc40bf7f5b41a374d5c5ae00005/livedata-1.1.1/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/de96d565a45b7436337adf6a2045c38e/livedata-core-1.1.1/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/ee0ad24839ec1c190791c7bdfde96e98/runtime-1.1.1/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:2:1-79:12
-INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:2:1-79:12
-INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:2:1-79:12
+ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:2:1-82:12
+INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:2:1-82:12
+INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:2:1-82:12
+INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:2:1-82:12
+MERGED from [com.karumi:dexter:5.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/151c2086d1ea120927adbdb8f0ed6417/AndroidManifest.xml:17:1-32:12
+MERGED from [com.android.support:design:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/98a783c39dc4c2ec49ea861ee6637ef5/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/d17928e96bf66a9bfb3dc98ce8396e49/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/5c0bb6762d38bde664cadef1499fa0e2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/65b78f58f10d6698ece300c8bb6cb684/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/309386b1350f23b409ec2e78be7d741f/AndroidManifest.xml:17:1-22:12
+MERGED from [id.zelory:compressor:2.1.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/22ec747f2f6a92de48a1ac385b5e425c/AndroidManifest.xml:2:1-12:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/cd15c08258785addd28cde2e957cab51/AndroidManifest.xml:15:1-20:12
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/f7758fbcf12283f9e288d2123461813a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/46f4b5b8f4ef1b423bc1be8da0dab874/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/9aec0e03d1747650028752b20fb6b422/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/c9dab7be389960439b0204f962ea6bde/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/5ed161d404357f6c6ae5cc5f30b697f7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/753fb3fa80e1c48d4813bf8eb612e7ef/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/9b4d72378520e6969faa1c6a768d8934/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/24ffaba0d3ccd44f7a0957ec74916730/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/3139058212f21e696c33a03e4dd27507/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/eb2961fe23a06d1d1b2d8b9713579c38/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/837a5d5ca7ce4690084f330d8eb7dc2f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/871c9d496cf66ab2ec33f0709d541d96/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/97b96ee150b2f8762a2c2f884b2e5585/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/133a9ef4da91e9a155f1c9bf52775466/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/4d67ac2fac2e7deeffb6b80ff12ba724/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/afc1c10068335c964cce8a4e614b3c81/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/7087b578af47dfa0e855e8e307ba649c/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/b8a4a64ab55dfec7056cbeed25a49cbc/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/926b06025c6b31dc3f2944d5f618823b/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/72b324a132796898ad7acf42badd2c88/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/884245f5197ad53df9526a395b238a09/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/590aa9a36aeb7c26f982b053527bbecf/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/1b062b8e768278bf267541ef10d05691/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/3d809c651c4325179db59793571311c3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/19c3a2fd8074f201963fa887854584f3/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/d6e4bc12ef1a82bf179196839e1966bf/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/244633598df022ea20c72c2c6102ff13/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/0529aa81079f10a96db859c46fc37626/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:2:1-82:12
+INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:2:1-82:12
+INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:2:1-82:12
 	package
 		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:3:5-31
 		INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:2:1-79:12
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:2:1-82:12
 		INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:2:1-79:12
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:2:1-82:12
 		INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:2:11-69
@@ -93,216 +93,230 @@ uses-permission#android.permission.CAMERA
 ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:14:5-65
 	android:name
 		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:14:22-62
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:15:5-68
+	android:name
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:15:22-65
 uses-permission#android.permission.CALL_PHONE
-ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:15:5-69
+ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:16:5-69
 	android:name
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:15:22-66
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:16:22-66
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:16:5-76
+ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:17:5-76
 	android:name
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:16:22-73
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:17:22-73
+uses-feature#android.hardware.camera
+ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:18:5-84
+	android:required
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:18:58-81
+	android:name
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:18:19-57
 application
-ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:19:5-77:19
-MERGED from [com.karumi:dexter:5.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/bf9d92f048cf55e3fcdb45b8caa32f44/dexter-5.0.0/AndroidManifest.xml:26:5-30:19
-MERGED from [com.karumi:dexter:5.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/bf9d92f048cf55e3fcdb45b8caa32f44/dexter-5.0.0/AndroidManifest.xml:26:5-30:19
-MERGED from [com.android.support:design:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/0624bbd8b03e1be1760fbf6f321457dc/design-28.0.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/0624bbd8b03e1be1760fbf6f321457dc/design-28.0.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/0f11d78cf96ea6b3217464874d0e642a/constraint-layout-1.1.3/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/0f11d78cf96ea6b3217464874d0e642a/constraint-layout-1.1.3/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:support-compat:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/f24263e62c1bc34eccf0e9b02afd5a26/support-compat-28.0.0/AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/f24263e62c1bc34eccf0e9b02afd5a26/support-compat-28.0.0/AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/f027cacc98a7706a31c13210940e2648/versionedparcelable-28.0.0/AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/f027cacc98a7706a31c13210940e2648/versionedparcelable-28.0.0/AndroidManifest.xml:22:5-23:19
+ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:20:5-80:19
+MERGED from [com.karumi:dexter:5.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/151c2086d1ea120927adbdb8f0ed6417/AndroidManifest.xml:26:5-30:19
+MERGED from [com.karumi:dexter:5.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/151c2086d1ea120927adbdb8f0ed6417/AndroidManifest.xml:26:5-30:19
+MERGED from [com.android.support:design:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/98a783c39dc4c2ec49ea861ee6637ef5/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/98a783c39dc4c2ec49ea861ee6637ef5/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/65b78f58f10d6698ece300c8bb6cb684/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/65b78f58f10d6698ece300c8bb6cb684/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/7087b578af47dfa0e855e8e307ba649c/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/7087b578af47dfa0e855e8e307ba649c/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/b8a4a64ab55dfec7056cbeed25a49cbc/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/b8a4a64ab55dfec7056cbeed25a49cbc/AndroidManifest.xml:22:5-23:19
+	android:requestLegacyExternalStorage
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:26:9-52
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/f24263e62c1bc34eccf0e9b02afd5a26/support-compat-28.0.0/AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/7087b578af47dfa0e855e8e307ba649c/AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:25:9-35
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:28:9-35
 	android:label
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:23:9-41
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:24:9-41
 	android:roundIcon
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:24:9-54
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:27:9-54
+	android:largeHeap
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:25:9-33
 	android:icon
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:22:9-43
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:23:9-43
 	android:allowBackup
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:21:9-35
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:22:9-35
 	android:theme
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:27:9-40
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:30:9-40
 	android:usesCleartextTraffic
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:26:9-44
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:29:9-44
 	android:name
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:20:9-47
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:21:9-47
 activity#rebus.llc.parvoz.MainActivity
-ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:28:9-33:59
+ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:31:9-36:59
 	android:screenOrientation
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:31:13-49
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:34:13-49
 	android:label
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:30:13-45
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:33:13-45
 	android:theme
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:33:13-56
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:36:13-56
 	android:name
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:29:13-57
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:32:13-57
 activity#rebus.llc.parvoz.SplashAvtivity
-ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:34:9-44:20
+ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:37:9-47:20
 	android:screenOrientation
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:36:13-49
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:39:13-49
 	android:theme
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:38:13-56
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:41:13-56
 	android:name
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:35:13-59
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:38:13-59
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:39:13-43:29
+ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:42:13-46:29
 action#android.intent.action.MAIN
-ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:40:17-69
+ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:43:17-69
 	android:name
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:40:25-66
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:43:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:42:17-77
+ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:45:17-77
 	android:name
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:42:27-74
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:45:27-74
 activity#rebus.llc.parvoz.LoginActivity
-ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:45:9-48:60
+ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:48:9-51:60
 	android:screenOrientation
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:46:13-49
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:49:13-49
 	android:label
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:48:13-57
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:51:13-57
 	android:name
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:47:13-58
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:50:13-58
 activity#rebus.llc.parvoz.SignUpActivity
-ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:49:9-51:15
-	android:screenOrientation
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:50:13-49
-	android:name
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:49:19-65
-activity#rebus.llc.parvoz.TicketForm
-ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:52:9-54:60
+ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:52:9-54:15
 	android:screenOrientation
 		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:53:13-49
-	android:label
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:54:13-56
 	android:name
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:52:19-61
-provider#rebus.llc.parvoz.others.GenericFileProvider
-ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:56:9-64:20
-	android:grantUriPermissions
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:60:13-47
-	android:authorities
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:58:13-65
-	android:exported
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:59:13-37
-	android:name
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:57:13-71
-meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:61:13-63:58
-	android:resource
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:63:17-55
-	android:name
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:62:17-67
-activity#rebus.llc.parvoz.CallBackActivity
-ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:66:9-67:51
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:52:19-65
+activity#rebus.llc.parvoz.TicketForm
+ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:55:9-57:60
 	android:screenOrientation
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:67:13-49
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:56:13-49
+	android:label
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:57:13-56
 	android:name
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:66:19-67
-activity#rebus.llc.parvoz.MyTicketsActivity
-ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:68:9-71
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:55:19-61
+provider#rebus.llc.parvoz.others.GenericFileProvider
+ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:59:9-67:20
+	android:grantUriPermissions
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:63:13-47
+	android:authorities
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:61:13-64
+	android:exported
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:62:13-37
 	android:name
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:68:19-68
-activity#rebus.llc.parvoz.ProfileActivity
-ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:69:9-70:61
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:60:13-71
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:64:13-66:56
+	android:resource
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:66:17-53
+	android:name
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:65:17-67
+activity#rebus.llc.parvoz.CallBackActivity
+ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:69:9-70:51
 	android:screenOrientation
 		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:70:13-49
 	android:name
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:69:19-66
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:69:19-67
+activity#rebus.llc.parvoz.MyTicketsActivity
+ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:71:9-71
+	android:name
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:71:19-68
+activity#rebus.llc.parvoz.ProfileActivity
+ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:72:9-73:61
+	android:screenOrientation
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:73:13-49
+	android:name
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:72:19-66
 uses-library#org.apache.http.legacy
-ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:72:9-87
+ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:75:9-87
 	android:required
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:72:61-85
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:75:61-85
 	android:name
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:72:23-60
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:75:23-60
 service#rebus.llc.parvoz.MyServiceNotif
-ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:73:9-76:39
+ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:76:9-79:39
 	android:enabled
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:75:13-35
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:78:13-35
 	android:exported
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:76:13-36
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:79:13-36
 	android:name
-		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:74:13-59
+		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml:77:13-59
 uses-sdk
 INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml
 INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml
-MERGED from [com.karumi:dexter:5.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/bf9d92f048cf55e3fcdb45b8caa32f44/dexter-5.0.0/AndroidManifest.xml:22:5-24:41
-MERGED from [com.karumi:dexter:5.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/bf9d92f048cf55e3fcdb45b8caa32f44/dexter-5.0.0/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:design:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/0624bbd8b03e1be1760fbf6f321457dc/design-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/0624bbd8b03e1be1760fbf6f321457dc/design-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/01cc05b406765ddd87a7ef4cf77a4b13/appcompat-v7-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/01cc05b406765ddd87a7ef4cf77a4b13/appcompat-v7-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/694c1da8fcb68e632a1c6d4490acf81f/support-v4-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/694c1da8fcb68e632a1c6d4490acf81f/support-v4-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/0f11d78cf96ea6b3217464874d0e642a/constraint-layout-1.1.3/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/0f11d78cf96ea6b3217464874d0e642a/constraint-layout-1.1.3/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:cardview-v7:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/d3bc6209f4a53bb82a04044d7519093c/cardview-v7-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/d3bc6209f4a53bb82a04044d7519093c/cardview-v7-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [id.zelory:compressor:2.1.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/d8381c9d8b8c359393b6ca57282aa980/compressor-2.1.0/AndroidManifest.xml:8:5-10:41
-MERGED from [id.zelory:compressor:2.1.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/d8381c9d8b8c359393b6ca57282aa980/compressor-2.1.0/AndroidManifest.xml:8:5-10:41
-MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/7d1010bc5947f68f85a6f0d9f87b583b/rxandroid-2.1.0/AndroidManifest.xml:18:5-43
-MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/7d1010bc5947f68f85a6f0d9f87b583b/rxandroid-2.1.0/AndroidManifest.xml:18:5-43
-MERGED from [com.android.support:support-fragment:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/12e30169ea06effe614cfffb19992945/support-fragment-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/12e30169ea06effe614cfffb19992945/support-fragment-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/3cbd9bc28e859c607e91ed3789a6182a/animated-vector-drawable-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/3cbd9bc28e859c607e91ed3789a6182a/animated-vector-drawable-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/755cdd282845178a2c84199a170c24e1/recyclerview-v7-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/755cdd282845178a2c84199a170c24e1/recyclerview-v7-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/66b0491ef7d5d4b8b6d67d901ace6a42/support-core-ui-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/66b0491ef7d5d4b8b6d67d901ace6a42/support-core-ui-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/84ee4f677bf54ab23dee2b8fbd0d554e/support-core-utils-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/84ee4f677bf54ab23dee2b8fbd0d554e/support-core-utils-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/09185b17f2c6673b1b1fccd6672ba0c3/support-vector-drawable-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/09185b17f2c6673b1b1fccd6672ba0c3/support-vector-drawable-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/51d366e13444903da3a3bb76ce97d850/support-media-compat-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/51d366e13444903da3a3bb76ce97d850/support-media-compat-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/86e6b32785ae8df9dc696b813fbed447/transition-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/86e6b32785ae8df9dc696b813fbed447/transition-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/39a60688e9d502c433ed0b91b5bac62b/loader-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/39a60688e9d502c433ed0b91b5bac62b/loader-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/b9ce7e76cc5ee3af5da34b11ff0645dd/viewpager-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/b9ce7e76cc5ee3af5da34b11ff0645dd/viewpager-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/22f901239b2f685e04d32c45e2f5b152/coordinatorlayout-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/22f901239b2f685e04d32c45e2f5b152/coordinatorlayout-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/1a7405d27c5de2b7f9ccdb0754a63ee2/drawerlayout-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/1a7405d27c5de2b7f9ccdb0754a63ee2/drawerlayout-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/b46d24660cfbb96b217f298b3617269d/slidingpanelayout-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/b46d24660cfbb96b217f298b3617269d/slidingpanelayout-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/9d119b9fda19c8ee7432fb0723c2e1b4/customview-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/9d119b9fda19c8ee7432fb0723c2e1b4/customview-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/a7d42058a67a2bc13f2fb85eedb969d7/swiperefreshlayout-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/a7d42058a67a2bc13f2fb85eedb969d7/swiperefreshlayout-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/86775dde09d37f1bac3ee09ad91789ec/asynclayoutinflater-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/86775dde09d37f1bac3ee09ad91789ec/asynclayoutinflater-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/f24263e62c1bc34eccf0e9b02afd5a26/support-compat-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/f24263e62c1bc34eccf0e9b02afd5a26/support-compat-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/f027cacc98a7706a31c13210940e2648/versionedparcelable-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/f027cacc98a7706a31c13210940e2648/versionedparcelable-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/8f503d2994a1ffe0081fc48ca5b8b24d/cursoradapter-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/8f503d2994a1ffe0081fc48ca5b8b24d/cursoradapter-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/de8775de15f3ed0e982c590a650a9e23/runtime-1.1.1/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/de8775de15f3ed0e982c590a650a9e23/runtime-1.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/e29778f577c91a7e96242aefe6c731e8/documentfile-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/e29778f577c91a7e96242aefe6c731e8/documentfile-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/a44ac447cb4ed15b24c0b2d295ac7370/localbroadcastmanager-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/a44ac447cb4ed15b24c0b2d295ac7370/localbroadcastmanager-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/4cc1d002af3af5974f660b705cb7bf44/print-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/4cc1d002af3af5974f660b705cb7bf44/print-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/c43c29e70f412b1d8699c9ac28e2419b/viewmodel-1.1.1/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/c43c29e70f412b1d8699c9ac28e2419b/viewmodel-1.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/83e8496ca5f6f47c6818aefd11343c6c/interpolator-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/83e8496ca5f6f47c6818aefd11343c6c/interpolator-28.0.0/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/38e39dc40bf7f5b41a374d5c5ae00005/livedata-1.1.1/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/38e39dc40bf7f5b41a374d5c5ae00005/livedata-1.1.1/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/de96d565a45b7436337adf6a2045c38e/livedata-core-1.1.1/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/de96d565a45b7436337adf6a2045c38e/livedata-core-1.1.1/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/ee0ad24839ec1c190791c7bdfde96e98/runtime-1.1.1/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/ee0ad24839ec1c190791c7bdfde96e98/runtime-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.karumi:dexter:5.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/151c2086d1ea120927adbdb8f0ed6417/AndroidManifest.xml:22:5-24:41
+MERGED from [com.karumi:dexter:5.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/151c2086d1ea120927adbdb8f0ed6417/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:design:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/98a783c39dc4c2ec49ea861ee6637ef5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/98a783c39dc4c2ec49ea861ee6637ef5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/d17928e96bf66a9bfb3dc98ce8396e49/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/d17928e96bf66a9bfb3dc98ce8396e49/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/5c0bb6762d38bde664cadef1499fa0e2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/5c0bb6762d38bde664cadef1499fa0e2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/65b78f58f10d6698ece300c8bb6cb684/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/65b78f58f10d6698ece300c8bb6cb684/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/309386b1350f23b409ec2e78be7d741f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/309386b1350f23b409ec2e78be7d741f/AndroidManifest.xml:20:5-44
+MERGED from [id.zelory:compressor:2.1.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/22ec747f2f6a92de48a1ac385b5e425c/AndroidManifest.xml:8:5-10:41
+MERGED from [id.zelory:compressor:2.1.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/22ec747f2f6a92de48a1ac385b5e425c/AndroidManifest.xml:8:5-10:41
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/cd15c08258785addd28cde2e957cab51/AndroidManifest.xml:18:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/cd15c08258785addd28cde2e957cab51/AndroidManifest.xml:18:5-43
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/f7758fbcf12283f9e288d2123461813a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/f7758fbcf12283f9e288d2123461813a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/46f4b5b8f4ef1b423bc1be8da0dab874/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/46f4b5b8f4ef1b423bc1be8da0dab874/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/9aec0e03d1747650028752b20fb6b422/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/9aec0e03d1747650028752b20fb6b422/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/c9dab7be389960439b0204f962ea6bde/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/c9dab7be389960439b0204f962ea6bde/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/5ed161d404357f6c6ae5cc5f30b697f7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/5ed161d404357f6c6ae5cc5f30b697f7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/753fb3fa80e1c48d4813bf8eb612e7ef/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/753fb3fa80e1c48d4813bf8eb612e7ef/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/9b4d72378520e6969faa1c6a768d8934/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/9b4d72378520e6969faa1c6a768d8934/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/24ffaba0d3ccd44f7a0957ec74916730/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/24ffaba0d3ccd44f7a0957ec74916730/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/3139058212f21e696c33a03e4dd27507/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/3139058212f21e696c33a03e4dd27507/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/eb2961fe23a06d1d1b2d8b9713579c38/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/eb2961fe23a06d1d1b2d8b9713579c38/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/837a5d5ca7ce4690084f330d8eb7dc2f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/837a5d5ca7ce4690084f330d8eb7dc2f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/871c9d496cf66ab2ec33f0709d541d96/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/871c9d496cf66ab2ec33f0709d541d96/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/97b96ee150b2f8762a2c2f884b2e5585/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/97b96ee150b2f8762a2c2f884b2e5585/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/133a9ef4da91e9a155f1c9bf52775466/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/133a9ef4da91e9a155f1c9bf52775466/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/4d67ac2fac2e7deeffb6b80ff12ba724/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/4d67ac2fac2e7deeffb6b80ff12ba724/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/afc1c10068335c964cce8a4e614b3c81/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/afc1c10068335c964cce8a4e614b3c81/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/7087b578af47dfa0e855e8e307ba649c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/7087b578af47dfa0e855e8e307ba649c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/b8a4a64ab55dfec7056cbeed25a49cbc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/b8a4a64ab55dfec7056cbeed25a49cbc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/926b06025c6b31dc3f2944d5f618823b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/926b06025c6b31dc3f2944d5f618823b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/72b324a132796898ad7acf42badd2c88/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/72b324a132796898ad7acf42badd2c88/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/884245f5197ad53df9526a395b238a09/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/884245f5197ad53df9526a395b238a09/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/590aa9a36aeb7c26f982b053527bbecf/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/590aa9a36aeb7c26f982b053527bbecf/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/1b062b8e768278bf267541ef10d05691/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/1b062b8e768278bf267541ef10d05691/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/3d809c651c4325179db59793571311c3/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/3d809c651c4325179db59793571311c3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/19c3a2fd8074f201963fa887854584f3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/19c3a2fd8074f201963fa887854584f3/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/d6e4bc12ef1a82bf179196839e1966bf/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/d6e4bc12ef1a82bf179196839e1966bf/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/244633598df022ea20c72c2c6102ff13/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/244633598df022ea20c72c2c6102ff13/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/0529aa81079f10a96db859c46fc37626/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/0529aa81079f10a96db859c46fc37626/AndroidManifest.xml:20:5-44
 INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml
 INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
@@ -314,8 +328,8 @@ INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManife
 		ADDED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/nazirjon/Downloads/Parvoz/Parvoz/app/src/main/AndroidManifest.xml
 activity#com.karumi.dexter.DexterActivity
-ADDED from [com.karumi:dexter:5.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/bf9d92f048cf55e3fcdb45b8caa32f44/dexter-5.0.0/AndroidManifest.xml:27:9-29:72
+ADDED from [com.karumi:dexter:5.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/151c2086d1ea120927adbdb8f0ed6417/AndroidManifest.xml:27:9-29:72
 	android:theme
-		ADDED from [com.karumi:dexter:5.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/bf9d92f048cf55e3fcdb45b8caa32f44/dexter-5.0.0/AndroidManifest.xml:29:13-69
+		ADDED from [com.karumi:dexter:5.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/151c2086d1ea120927adbdb8f0ed6417/AndroidManifest.xml:29:13-69
 	android:name
-		ADDED from [com.karumi:dexter:5.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/bf9d92f048cf55e3fcdb45b8caa32f44/dexter-5.0.0/AndroidManifest.xml:28:13-60
+		ADDED from [com.karumi:dexter:5.0.0] /Users/nazirjon/.gradle/caches/transforms-2/files-2.1/151c2086d1ea120927adbdb8f0ed6417/AndroidManifest.xml:28:13-60

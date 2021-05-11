@@ -27,6 +27,8 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import rebus.llc.parvoz.CallBackActivity;
 import rebus.llc.parvoz.MainActivity;
@@ -73,6 +75,8 @@ public class MainFragment  extends Fragment  implements MyAsyncTask.ResponseCame
     ObjectMapper objectMapper;
     int MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1;
     SwipeRefreshLayout swipeRefreshLayout;
+    private Timer myTimer;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,
@@ -138,7 +142,14 @@ public class MainFragment  extends Fragment  implements MyAsyncTask.ResponseCame
         });
 
         getSpravochniki();
+        myTimer = new Timer();
+        myTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                getSpravochniki();
+            }
 
+        }, 0, 60L*1000);
 
         return rootView;
     }
@@ -377,4 +388,5 @@ public class MainFragment  extends Fragment  implements MyAsyncTask.ResponseCame
     public void stopLoading(){
         swipeRefreshLayout.setRefreshing(false);
     }
+
 }

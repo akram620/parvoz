@@ -1,10 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: io.reactivex.rxjava2:rxandroid:2.1.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/rxandroid-2.1.0.aar/9b62d5fe91a02e1a02d73c8524aa5a1d/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c90fa31174185424f5ce2019fe93d99/rxandroid-2.1.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c90fa31174185424f5ce2019fe93d99/rxandroid-2.1.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c90fa31174185424f5ce2019fe93d99/rxandroid-2.1.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c7fd490e035bbd5fd567edfd7bc7b843/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c7fd490e035bbd5fd567edfd7bc7b843/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c7fd490e035bbd5fd567edfd7bc7b843/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxandroid/2.1.0/b55491bbc85e0f7734e1712dc7ec9f28884ffd8c/rxandroid-2.1.0-javadoc.jar!/" />

@@ -18,10 +18,12 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Parcelable;
 import android.provider.MediaStore;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
@@ -33,10 +35,13 @@ import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.squareup.picasso.Picasso;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -49,6 +54,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import rebus.llc.parvoz.adapters.CameraPickAdapter;
 import rebus.llc.parvoz.db.DBSample;
 import rebus.llc.parvoz.models.SignInData;
 import rebus.llc.parvoz.models.UserData;
@@ -120,10 +126,14 @@ public class ProfileActivity extends AppCompatActivity  implements MyAsyncTask.R
     Uri picUri;
     private ArrayList<String> permissionsToRequest;
     private ArrayList<String> permissionsRejected = new ArrayList<>();
-    private ArrayList<String> permissions = new ArrayList<>();
 
     private final static int ALL_PERMISSIONS_RESULT = 107;
-    private final static int IMAGE_RESULT = 200;
+    private static String FILE_NAME = "photo.jpg";
+    private  File photoFile;
+
+    private int GALLERY = 1, CAMERA = 2;
+    private String [] permissions = {"android.permission.WRITE_EXTERNAL_STORAGE", "android.permission.ACCESS_FINE_LOCATION", "android.permission.READ_PHONE_STATE", "android.permission.SYSTEM_ALERT_WINDOW","android.permission.CAMERA"};
+
 
 
     @Override
@@ -253,7 +263,7 @@ public class ProfileActivity extends AppCompatActivity  implements MyAsyncTask.R
                                 cal_date_pass.set(Calendar.MONTH, monthOfYear);
                                 cal_date_pass.set(Calendar.DAY_OF_MONTH, dayOfMonth);
 
-                                SimpleDateFormat dateformat_yyyyMMdd = new SimpleDateFormat("yyyy-MM-dd");
+                                //SimpleDateFormat dateformat_yyyyMMdd = new SimpleDateFormat("yyyy-MM-dd");
                                 SimpleDateFormat dateformat_ddMMyyyy = new SimpleDateFormat("dd-MM-yyyy");
                                 String date_to_string_ddMMyyyy = dateformat_ddMMyyyy.format(cal_date_pass.getTime());
                                 datePassport.setText(date_to_string_ddMMyyyy);
@@ -327,22 +337,18 @@ public class ProfileActivity extends AppCompatActivity  implements MyAsyncTask.R
         });
 
 
-
-        permissions.add(CAMERA);
-        permissions.add(WRITE_EXTERNAL_STORAGE);
-        permissions.add(READ_EXTERNAL_STORAGE);
-        permissionsToRequest = findUnAskedPermissions(permissions);
-
+        // requestMultiplePermissions(); // check permission
+        int requestCode = 200;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-
-            if (permissionsToRequest.size() > 0)
-                requestPermissions(permissionsToRequest.toArray(new String[permissionsToRequest.size()]), ALL_PERMISSIONS_RESULT);
+            requestPermissions(permissions, requestCode);
         }
+
 
         addNewDocument.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivityForResult(getPickImageChooserIntent(), IMAGE_RESULT);
+                //startActivityForResult(getPickImageChooserIntent(), IMAGE_RESULT);
+                showPictureDialog();
             }
         });
     }
@@ -351,8 +357,6 @@ public class ProfileActivity extends AppCompatActivity  implements MyAsyncTask.R
     public void deleteAcount(){
 
         if( myAsyncTask != null) return;
-
-
 
         String url = getServerUrls()+"user/delete";
         List<NameValuePair> params = new ArrayList<NameValuePair>();
@@ -444,7 +448,8 @@ public class ProfileActivity extends AppCompatActivity  implements MyAsyncTask.R
 
         if(base64Document != null  ){
             Log.d("Connection", "base64Document != null");
-             Bitmap bitmap = justConvertToBitmap(base64Document);
+             Bitmap bitmap = justConvertToBitmap(base64Document.replace("data:image/jpeg;base64,", ""));
+            Log.d("Connection", "base64Document != "+base64Document.toString());
                 imageView.setImageBitmap(bitmap);
 
         }
@@ -748,71 +753,150 @@ public class ProfileActivity extends AppCompatActivity  implements MyAsyncTask.R
     }
 
 
+    private void showPictureDialog() {
+        final String [] items = new String[] {"Галерея", "Камера"};
+        final Integer[] icons = new Integer[] { R.drawable.ic_photo_library, R.drawable.ic_camera};
+        ListAdapter adapter = new CameraPickAdapter(this, items, icons);
+        AlertDialog.Builder pictureDialog = new AlertDialog.Builder(this);
+        pictureDialog.setTitle("Выберите").setAdapter(adapter,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which) {
+                            case 0:
+                                choosePhotoFromGallary();
+                                break;
+                            case 1:
+                                takePhotoFromCamera();
+                                break;
+                        }
+                    }
+                });
+        pictureDialog.show();
+    }
+
+    public void choosePhotoFromGallary() {
+        Intent galleryIntent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(galleryIntent, GALLERY);
+    }
+
+    private void takePhotoFromCamera() {
+        Intent intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE); photoFile = getPhotoFile(FILE_NAME);
+        Uri fileProvider = FileProvider.getUriForFile(this, "rebus.llc.parvoz.fileprovider", photoFile);
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, fileProvider);
+        if (intent.resolveActivity(this.getPackageManager()) != null) {
+            startActivityForResult(intent, CAMERA);
+        } else {
+            Toast.makeText(this, "Unable to open camera", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private File getPhotoFile(String filaName) {
+        File getImage = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        try {
+            return File.createTempFile(filaName, ".jpg", getImage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-        if (resultCode == Activity.RESULT_OK) {
-            if (requestCode == IMAGE_RESULT) {
-                String filePath = getImageFilePath(data);
-                if (filePath != null) {
-                    Bitmap selectedImage = BitmapFactory.decodeFile(filePath);
-                    //imageView.setImageBitmap(selectedImage);
-                    Log.d("Connection",selectedImage.toString());
-                    base64Document = convertToBase64(selectedImage);
-                    long length = base64Document.length();
-                    Log.d("Connection","LENGTH = "+length);
-                    //convertvToImage(base64Document);
-                    Bitmap bitmap = convertToBitmap(base64Document);
-                    imageView.setImageBitmap(bitmap);
-
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == this.RESULT_CANCELED) {
+            return;
+        }
+        if (requestCode == GALLERY) {
+            if (data != null) {
+                Uri contentURI = data.getData();
+                try {
+                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), contentURI);
+                    base64Document = convertToBase64(bitmap);
+                    Picasso.with(context).load(contentURI).into(imageView);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "Failed!", Toast.LENGTH_SHORT).show();
                 }
             }
+
+        } else if (requestCode == CAMERA) {
+            Bitmap selectedImage = BitmapFactory.decodeFile(photoFile.getAbsolutePath());
+            base64Document = convertToBase64(selectedImage);
+            Picasso.with(context).load(photoFile.getAbsoluteFile()).into(imageView);
         }
     }
 
-    public Intent getPickImageChooserIntent() {
 
-        Uri outputFileUri = getCaptureImageOutputUri();
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//
+//        if (resultCode == Activity.RESULT_OK) {
+//            if (requestCode == IMAGE_RESULT) {
+//                if (data != null) {
+//                    Log.d("data === ", data.toString());
+//                    String filePath = getImageFilePath(data);
+////                    Log.d("filePath == ", filePath.toString());
+//                    if (filePath != null) {
+//                        Bitmap selectedImage = BitmapFactory.decodeFile(filePath);
+//                        //imageView.setImageBitmap(selectedImage);
+//                        Log.d("Connection", selectedImage.toString());
+//                        base64Document = convertToBase64(selectedImage);
+//                        long length = base64Document.length();
+//                        Log.d("Connection", "LENGTH = " + length);
+//                        //convertvToImage(base64Document);
+//                        Bitmap bitmap = convertToBitmap(base64Document);
+//                        imageView.setImageBitmap(bitmap);
+//                    }
+//                }
+//            }
+//        }
+//    }
 
-        List<Intent> allIntents = new ArrayList<>();
-        PackageManager packageManager = getPackageManager();
-
-        Intent captureIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-        List<ResolveInfo> listCam = packageManager.queryIntentActivities(captureIntent, 0);
-        for (ResolveInfo res : listCam) {
-            Intent intent = new Intent(captureIntent);
-            intent.setComponent(new ComponentName(res.activityInfo.packageName, res.activityInfo.name));
-            intent.setPackage(res.activityInfo.packageName);
-            if (outputFileUri != null) {
-                intent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
-            }
-            allIntents.add(intent);
-        }
-
-        Intent galleryIntent = new Intent(Intent.ACTION_GET_CONTENT);
-        galleryIntent.setType("image/*");
-        List<ResolveInfo> listGallery = packageManager.queryIntentActivities(galleryIntent, 0);
-        for (ResolveInfo res : listGallery) {
-            Intent intent = new Intent(galleryIntent);
-            intent.setComponent(new ComponentName(res.activityInfo.packageName, res.activityInfo.name));
-            intent.setPackage(res.activityInfo.packageName);
-            allIntents.add(intent);
-        }
-
-        Intent mainIntent = allIntents.get(allIntents.size() - 1);
-        for (Intent intent : allIntents) {
-            if (intent.getComponent().getClassName().equals("com.android.documentsui.DocumentsActivity")) {
-                mainIntent = intent;
-                break;
-            }
-        }
-        allIntents.remove(mainIntent);
-
-        Intent chooserIntent = Intent.createChooser(mainIntent, "Select source");
-        chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, allIntents.toArray(new Parcelable[allIntents.size()]));
-
-        return chooserIntent;
-    }
+//    public Intent getPickImageChooserIntent() {
+//
+//        Uri outputFileUri = getCaptureImageOutputUri();
+//
+//        List<Intent> allIntents = new ArrayList<>();
+//        PackageManager packageManager = getPackageManager();
+//
+//        Intent captureIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+//        List<ResolveInfo> listCam = packageManager.queryIntentActivities(captureIntent, 0);
+//        for (ResolveInfo res : listCam) {
+//            Intent intent = new Intent(captureIntent);
+//            intent.setComponent(new ComponentName(res.activityInfo.packageName, res.activityInfo.name));
+//            intent.setPackage(res.activityInfo.packageName);
+//            if (outputFileUri != null) {
+//                intent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
+//            }
+//            allIntents.add(intent);
+//        }
+//
+//        Intent galleryIntent = new Intent(Intent.ACTION_GET_CONTENT);
+//        galleryIntent.setType("image/*");
+//        List<ResolveInfo> listGallery = packageManager.queryIntentActivities(galleryIntent, 0);
+//        for (ResolveInfo res : listGallery) {
+//            Intent intent = new Intent(galleryIntent);
+//            intent.setComponent(new ComponentName(res.activityInfo.packageName, res.activityInfo.name));
+//            intent.setPackage(res.activityInfo.packageName);
+//            allIntents.add(intent);
+//        }
+//
+//        Intent mainIntent = allIntents.get(allIntents.size() - 1);
+//        for (Intent intent : allIntents) {
+//            if (intent.getComponent().getClassName().equals("com.android.documentsui.DocumentsActivity")) {
+//                mainIntent = intent;
+//                break;
+//            }
+//        }
+//        allIntents.remove(mainIntent);
+//
+//        Intent chooserIntent = Intent.createChooser(mainIntent, "Select source");
+//        chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, allIntents.toArray(new Parcelable[allIntents.size()]));
+//
+//        return chooserIntent;
+//    }
 
 
     private String getImageFromFilePath(Intent data) {
@@ -825,11 +909,15 @@ public class ProfileActivity extends AppCompatActivity  implements MyAsyncTask.R
 
 
     private Uri getCaptureImageOutputUri() {
+        Log.d("data22 === ", "getCaptureImageOutputUri");
         Uri outputFileUri = null;
         File getImage = getExternalFilesDir("");
         if (getImage != null) {
-            outputFileUri = Uri.fromFile(new File(getImage.getPath(), "profile.png"));
+            Log.d("getImage === ", getImage.getPath());
+            Log.d("getImagName === ", getImage.getName());
+            outputFileUri = Uri.fromFile(new File(getImage.getPath(), "profil.png"));
         }
+        Log.d("outputFileUri === ", outputFileUri.getPath());
         return outputFileUri;
     }
 
@@ -839,6 +927,7 @@ public class ProfileActivity extends AppCompatActivity  implements MyAsyncTask.R
     }
 
     private String getPathFromURI(Uri contentUri) {
+        Log.d("data22 === ", "getPathFromURI");
         String[] proj = {MediaStore.Audio.Media.DATA};
         Cursor cursor = getContentResolver().query(contentUri, proj, null, null, null);
         int column_index = cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA);
@@ -916,8 +1005,5 @@ public class ProfileActivity extends AppCompatActivity  implements MyAsyncTask.R
                 }
                 break;
         }
-
     }
-
-
 }

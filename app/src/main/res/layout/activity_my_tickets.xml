@@ -4,10 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="rebus.llc.parvoz.MyTicketsActivity">
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
 
         <AutoCompleteTextView
             android:id="@+id/lastName"
@@ -19,18 +21,19 @@
             android:singleLine="true" />
 
     </android.support.design.widget.TextInputLayout>
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+<!--    <android.support.design.widget.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        tools:ignore="MissingConstraints">-->
 
-        <AutoCompleteTextView
-            android:id="@+id/firstName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Номер телефона"
-            android:inputType="phone"
-            android:maxLines="1"
-            android:singleLine="true" />
+<!--        <AutoCompleteTextView-->
+<!--            android:id="@+id/firstName"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Номер телефона"-->
+<!--            android:inputType="phone"-->
+<!--            android:maxLines="1"-->
+<!--            android:singleLine="true" />-->
 
-    </android.support.design.widget.TextInputLayout>
+<!--    </android.support.design.widget.TextInputLayout>-->
 </android.support.constraint.ConstraintLayout>

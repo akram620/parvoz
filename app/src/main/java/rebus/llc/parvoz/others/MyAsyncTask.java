@@ -210,10 +210,6 @@ public class MyAsyncTask  extends AsyncTask<Void, Void, Void> {
 
         }
 
-
-
-
-
         response_bool = res;
 
         return null;

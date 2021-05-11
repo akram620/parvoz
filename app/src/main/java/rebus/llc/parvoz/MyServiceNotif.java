@@ -30,9 +30,11 @@ import java.util.TimerTask;
 
 import rebus.llc.parvoz.R;
 import rebus.llc.parvoz.db.DBSample;
+import rebus.llc.parvoz.fragments.MainFragment;
 import rebus.llc.parvoz.models.ListModels;
 import rebus.llc.parvoz.models.MyTicketModel;
 import rebus.llc.parvoz.models.ObjavlenijaModel;
+import rebus.llc.parvoz.others.Encrypt;
 import rebus.llc.parvoz.others.MyAsyncTask;
 import rebus.llc.parvoz.others.Settings;
 import rebus.llc.parvoz.others.Utilities;
@@ -49,6 +51,7 @@ public class MyServiceNotif  extends Service implements MyAsyncTask.ResponseCame
     int importance = NotificationManager.IMPORTANCE_DEFAULT;
     Settings settings;
     ObjectMapper objectMapper;
+    private Encrypt md5Conver;
 
     MyAsyncTask myAsyncTask;
     Timer myTimer_local = null; // Создаем таймер
@@ -64,6 +67,7 @@ public class MyServiceNotif  extends Service implements MyAsyncTask.ResponseCame
     public int onStartCommand(Intent intent, int flags, int  startId) {
         // Log.d(LOG_TAG, "onStartCommand");
         settings = new Settings(getApplicationContext());
+        md5Conver = new Encrypt();
         myAsyncTask = null;
         notificationManagerCompat = NotificationManagerCompat.from(getApplicationContext());
 
@@ -91,6 +95,16 @@ public class MyServiceNotif  extends Service implements MyAsyncTask.ResponseCame
                             myAsyncTask = new MyAsyncTask(getApplicationContext(), params, url, "get");
                             myAsyncTask.setResponseListener(MyServiceNotif.this);
                             myAsyncTask.execute();
+
+//                            String url2 = getServerUrls()+"login";
+//                            List<NameValuePair> params2 = new ArrayList<NameValuePair>();
+//                            params.add(new BasicNameValuePair("password",  md5Conver.md5(new Settings(getApplicationContext()).getPassword())));
+//                            params.add(new BasicNameValuePair("login", new Settings(getApplicationContext()).getLogin()));
+//
+//                            myAsyncTask = new MyAsyncTask(getApplicationContext(), params2, url2, "post");
+//                            myAsyncTask.setResponseListener(MyServiceNotif.this);
+//                            myAsyncTask.execute();
+
                             Calendar calendar = Calendar.getInstance();
                             Calendar calendar_time = Calendar.getInstance();
 
@@ -103,11 +117,12 @@ public class MyServiceNotif  extends Service implements MyAsyncTask.ResponseCame
                             calendar_time.add(Calendar.HOUR, 6);
                             String cuurent_date = sdf.format(calendar_time.getTime());
                             String cuurent_date_time_2 = sdfT.format(calendar_time.getTime());
+                            Log.d("cuurent_date_time_2", "cuurent_date_time_2 "+cuurent_date_time_2);
 
                             calendar.add(Calendar.DATE, 1);
                             String date_tomorrow = sdf.format(calendar.getTime());
 
-                            String filter = "   vremja_vyleta < '"+cuurent_date_time_2+"' AND data_vyleta = '"+cuurent_date+" 00:00:00' ";
+                            String filter = " status_id = 'oplachen' AND vremja_vyleta < '"+cuurent_date_time_2+"' AND data_vyleta = '"+cuurent_date+" 00:00:00' ";
 
                             ArrayList<MyTicketModel> ticketsForTodayModels = DBSample.getMyTickets(getBaseContext(),null, filter);
                             Log.d("Services", "filter "+filter);
@@ -182,7 +197,6 @@ public class MyServiceNotif  extends Service implements MyAsyncTask.ResponseCame
 
         if(res) {
             ListModels objavlenijaModels = new ListModels();
-
             objectMapper = new ObjectMapper();
 
             try {
@@ -195,8 +209,6 @@ public class MyServiceNotif  extends Service implements MyAsyncTask.ResponseCame
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }else {
-
         }
         myAsyncTask = null;
 

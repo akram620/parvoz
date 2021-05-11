@@ -431,7 +431,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
 
             if(message.equals("422")){
-                Toast toast = Toast.makeText(this, "Неверный пароль или номер!", Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(this, "Данный номер не зарегистрирован или неверный номер!", Toast.LENGTH_SHORT);
                 toast.show();
             }
 
